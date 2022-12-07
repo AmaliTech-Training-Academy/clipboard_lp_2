@@ -8,7 +8,7 @@
     --strong-cyan:#26BBA4;
     --light-blue: #6174FF;
     --dark-grayish-blue:#4C545C;
-    --grayish-blue:#9fa8b2;
+    --grayish-blue:#9fabb2;
  }
 
  body{
@@ -24,7 +24,7 @@
     background-image: url("./clipboard-landing-page-master/images/bg-header-desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 80px 0 40px;
+    padding: 80px 0 20px;
  }
 
  img{
@@ -33,17 +33,19 @@
 
  p{
    line-height: 1.5;
+   color: var(--grayish-blue);
 
  }
  .container{
     margin: 30px auto;
     max-width: 100%;
     width: 1200px;
+    padding: 0 20px;
    
  }
 
  .container-small{
-    width: 500px;
+    width: 700px;
  }
 
  section{
@@ -55,11 +57,16 @@
     display:flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
  }
 
  .flex > *{
     flex:1;
     padding: 10px;
+ }
+
+ .m4{
+   margin: 100px auto;
  }
 
 .btn{
@@ -117,8 +124,28 @@ footer .links li{
 footer .links{
     flex: 3;
 }
+footer .social a{
+   font-size: 24px;
+   margin-right: 5px;
+}
 
-footer .social{
-    font-size: 24px;
-   margin-right: 5px; 
+footer .social li {
+   margin: 0 5px; 
+}
+
+@media(max-width:768px){
+   .flex{
+flex-direction: column;
+
+   }
+   footer .links{
+    flex-direction: column;
+  }
+  
+
+   footer .links li{
+      margin-right: 0;
+      padding: 10px;
+      
+  }
 }
